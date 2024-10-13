@@ -91,30 +91,3 @@ let obj2 = subClass(no1: 30, no2: 50)
 print("res is: \(obj1.no1)")
 print("res is: \(obj2.no1)")
 print("res is: \(obj2.no2)")
-
-//access control for generics.
-public struct TOS<T> {
-   var items = [T]()
-    
-   mutating func push(item: T) {
-      items.append(item)
-   }
-
-   mutating func pop() -> T {
-      return items.removeLast()
-   }
-}
-
-var tos = TOS<String>()
-tos.push(item: "Swift 4")
-print(tos.items)
-
-tos.push(item: "Generics")
-print(tos.items)
-
-tos.push(item: "Type Parameters")
-print(tos.items)
-
-tos.push(item: "Naming Type Parameters")
-print(tos.items)
-let deletedTos = tos.pop()
